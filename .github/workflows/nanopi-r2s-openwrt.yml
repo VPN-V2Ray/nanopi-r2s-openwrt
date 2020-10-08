@@ -1,6 +1,11 @@
 name: NanoPi R2S OpenWrt
 
-on: repository_dispatch
+on: 
+  repository_dispatch:
+  release:
+    types: [published]
+  watch:
+    types: [started]
 
 jobs:
   OpenWrt-18_06:
